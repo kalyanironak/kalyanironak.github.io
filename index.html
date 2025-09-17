@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronak Kalyani - Resume</title>
+    <title>Ronak Kalyani</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
@@ -18,7 +18,7 @@
             line-height: 1.4;
             color: #2d3748;
             background: white;
-            font-size: 11px;
+            font-size: 12px;
         }
         
         .container {
@@ -62,7 +62,7 @@
         
         /* Section headers */
         .section {
-            margin-bottom: 18px;
+            margin-bottom: 24px;
         }
         
         .section-title {
@@ -91,7 +91,7 @@
         .company-role {
             font-weight: 600;
             color: #1a202c;
-            font-size: 12px;
+            font-size: 13px;
         }
         
         .company {
@@ -99,7 +99,7 @@
         }
         
         .location-date {
-            font-size: 10px;
+            font-size: 11px;
             color: #718096;
             font-weight: 500;
         }
@@ -134,38 +134,85 @@
         }
         
         /* Education */
-        .education-item {
-            margin-bottom: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+        .education-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .education-list li {
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+        }
+        
+        .education-list li:before {
+            content: "▸";
+            color: #3182ce;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         
         .degree {
-            font-weight: 500;
+            font-weight: 600;
             color: #1a202c;
+            display: block;
         }
         
         .score {
             color: #4a5568;
-            font-size: 10px;
+            font-size: 11px;
+            margin-left: 8px;
         }
         
         /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 8px;
-            row-gap: 4px;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            row-gap: 8px;
         }
         
         .skill-category {
             font-weight: 600;
             color: #2d3748;
+            margin-bottom: 4px;
         }
         
         .skill-list {
             color: #4a5568;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .skill-list:before {
+            content: "▸";
+            color: #3182ce;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CS Fundamentals - special formatting */
+        .cs-fundamentals {
+            list-style: none;
+            margin-left: 0;
+            color: #4a5568;
+        }
+        
+        .cs-fundamentals li {
+            margin-bottom: 2px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .cs-fundamentals li:before {
+            content: "•";
+            color: #3182ce;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
         
         /* Technical Leadership */
@@ -190,7 +237,7 @@
         /* Responsive adjustments */
         @media print {
             body { 
-                font-size: 10px;
+                font-size: 11px;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -198,7 +245,10 @@
                 padding: 0.4in;
             }
             .section {
-                margin-bottom: 16px;
+                margin-bottom: 20px;
+            }
+            .right-column .section {
+                margin-bottom: 28px;
             }
         }
         
@@ -216,6 +266,12 @@
         
         .right-column {
             /* Education, Skills, Technical Leadership */
+            padding-left: 10px;
+        }
+        
+        /* Add more space between sections in right column */
+        .right-column .section {
+            margin-bottom: 32px;
         }
     </style>
 </head>
@@ -300,35 +356,50 @@
                 <!-- Education -->
                 <section class="section">
                     <h2 class="section-title">Education</h2>
-                    <div class="education-item">
-                        <span class="degree"><strong>B.Tech, NIT Bhopal</strong></span>
-                        <span class="score">7.22/10 (2012 – 2016)</span>
-                    </div>
-                    <div class="education-item">
-                        <span class="degree"><strong>Intermediate, CBSE</strong></span>
-                        <span class="score">82.4% (2010 – 2011)</span>
-                    </div>
-                    <div class="education-item">
-                        <span class="degree"><strong>High School, CBSE</strong></span>
-                        <span class="score">93.2% (2008 – 2009)</span>
-                    </div>
+                    <ul class="education-list">
+                        <li>
+                            <span class="degree">B.Tech, NIT Bhopal</span>
+                            <span class="score">7.22/10 (2012 – 2016)</span>
+                        </li>
+                        <li>
+                            <span class="degree">Intermediate, CBSE</span>
+                            <span class="score">82.4% (2010 – 2011)</span>
+                        </li>
+                        <li>
+                            <span class="degree">High School, CBSE</span>
+                            <span class="score">93.2% (2008 – 2009)</span>
+                        </li>
+                    </ul>
                 </section>
 
                 <!-- Skills -->
                 <section class="section">
                     <h2 class="section-title">Skills</h2>
                     <div class="skills-grid">
-                        <span class="skill-category">Languages:</span>
-                        <span class="skill-list">Java, Golang, Node.js</span>
+                        <div>
+                            <div class="skill-category">Languages:</div>
+                            <div class="skill-list">Java, Golang, Node.js</div>
+                        </div>
                         
-                        <span class="skill-category">Data Systems:</span>
-                        <span class="skill-list">MySQL, PostgreSQL, Aerospike, Elasticsearch, Kafka, Redis</span>
+                        <div>
+                            <div class="skill-category">Data Systems:</div>
+                            <div class="skill-list">MySQL, PostgreSQL, Aerospike, Elasticsearch, Kafka, Redis</div>
+                        </div>
                         
-                        <span class="skill-category">Infrastructure:</span>
-                        <span class="skill-list">Docker, Kubernetes, Helm, Terraform, Google Cloud</span>
+                        <div>
+                            <div class="skill-category">Infrastructure:</div>
+                            <div class="skill-list">Docker, Kubernetes, Helm, Terraform, Google Cloud</div>
+                        </div>
                         
-                        <span class="skill-category">CS Fundamentals:</span>
-                        <span class="skill-list">Data Structures & Algorithms, Data-Intensive Application Design, Distributed Systems, Object-Oriented Design</span>
+                        <div>
+                            <div class="skill-category">CS Fundamentals:</div>
+                            <ul class="cs-fundamentals">
+                                <li>Data Structures & Algorithms</li>
+                                <li>Data-Intensive Application Design</li>
+                                <li>Distributed Systems</li>
+                                <li>Object-Oriented Design</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -338,7 +409,7 @@
                     <ul class="leadership-list">
                         <li>Mentored peers and juniors on <strong>application design, databases, and scaling</strong>.</li>
                         <li>Collaborated with product and engineering teams to <strong>align business needs with technical design</strong>.</li>
-                        <li>Guided projects from ideation to delivery, <strong>clarifying scope and trade-offs in ambiguous situations</strong>.</li>
+                        <li>Led projects from ideation to delivery, <strong>clarifying scope and trade-offs in ambiguous situations</strong>.</li>
                     </ul>
                 </section>
             </div>
