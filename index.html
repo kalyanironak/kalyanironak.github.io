@@ -18,7 +18,7 @@
             line-height: 1.4;
             color: #2d3748;
             background: white;
-            font-size: 12px;
+            font-size: 13px;
         }
         
         .container {
@@ -78,7 +78,7 @@
         
         /* Experience */
         .job {
-            margin-bottom: 14px;
+            margin-bottom: 18px;
         }
         
         .job-header {
@@ -91,7 +91,7 @@
         .company-role {
             font-weight: 600;
             color: #1a202c;
-            font-size: 13px;
+            font-size: 14px;
         }
         
         .company {
@@ -99,9 +99,10 @@
         }
         
         .location-date {
-            font-size: 11px;
+            font-size: 12px;
             color: #718096;
             font-weight: 500;
+            white-space: nowrap;
         }
         
         .achievements {
@@ -237,7 +238,7 @@
         /* Responsive adjustments */
         @media print {
             body { 
-                font-size: 11px;
+                font-size: 12px;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -250,13 +251,16 @@
             .right-column .section {
                 margin-bottom: 28px;
             }
+            .job {
+                margin-bottom: 16px;
+            }
         }
         
         /* Main content layout */
         .main-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
+            grid-template-columns: 2.2fr 0.8fr;
+            gap: 30px;
             align-items: start;
         }
         
@@ -266,7 +270,7 @@
         
         .right-column {
             /* Education, Skills, Technical Leadership */
-            padding-left: 10px;
+            padding-left: 15px;
         }
         
         /* Add more space between sections in right column */
@@ -326,7 +330,7 @@
 
                     <div class="job">
                         <div class="job-header">
-                            <span class="company-role"><span class="company">Paytm Payments Bank</span> – Senior Software Engineer</span>
+                            <span class="company-role"><span class="company">Paytm</span> – Senior Software Engineer</span>
                             <span class="location-date">Noida | Feb 2018 – Dec 2020</span>
                         </div>
                         <ul class="achievements">
