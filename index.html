@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronak Kalyani - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.4;
+            color: #2d3748;
+            background: white;
+            font-size: 11px;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            min-height: 11in;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .contact {
+            font-size: 11px;
+            color: #4a5568;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        /* Section headers */
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2b6cb0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #bee3f8;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 14px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .company-role {
+            font-weight: 600;
+            color: #1a202c;
+            font-size: 12px;
+        }
+        
+        .company {
+            color: #2b6cb0;
+        }
+        
+        .location-date {
+            font-size: 10px;
+            color: #718096;
+            font-weight: 500;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+        }
+        
+        .achievements li:before {
+            content: "▸";
+            color: #3182ce;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Highlight metrics and keywords */
+        .highlight {
+            background: linear-gradient(120deg, #ebf8ff 0%, #ebf8ff 100%);
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-weight: 500;
+            color: #2c5282;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .degree {
+            font-weight: 500;
+            color: #1a202c;
+        }
+        
+        .score {
+            color: #4a5568;
+            font-size: 10px;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 8px;
+            row-gap: 4px;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .skill-list {
+            color: #4a5568;
+        }
+        
+        /* Technical Leadership */
+        .leadership-list {
+            list-style: none;
+        }
+        
+        .leadership-list li {
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .leadership-list li:before {
+            content: "▸";
+            color: #3182ce;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Responsive adjustments */
+        @media print {
+            body { 
+                font-size: 10px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .container {
+                padding: 0.4in;
+            }
+            .section {
+                margin-bottom: 16px;
+            }
+        }
+        
+        /* Main content layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+        
+        .left-column {
+            /* Experience section */
+        }
+        
+        .right-column {
+            /* Education, Skills, Technical Leadership */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">Ronak Kalyani</h1>
+            <div class="contact">
+                <span class="contact-item">📧 ronak4kalyani@gmail.com</span>
+                <span class="contact-item">📱 +91 8010383920</span>
+                <span class="contact-item">🔗 <a href="https://www.linkedin.com/in/ronak4kalyani/" style="color: inherit; text-decoration: none;">LinkedIn</a></span>
+            </div>
+        </header>
+
+        <!-- Main Content with Two Columns -->
+        <div class="main-content">
+            <!-- Left Column - Experience -->
+            <div class="left-column">
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="company-role"><span class="company">Roku</span> – Senior Software Engineer</span>
+                            <span class="location-date">Bangalore | Jul 2025 – Present</span>
+                        </div>
+                        <ul class="achievements">
+                            <li><strong>Leading Creative Generation effort</strong> for Roku's Native Ads, powering <span class="highlight">~250M CTV ad impressions per week</span>.</li>
+                            <li><strong>Roku Ad Exchange observability migration</strong>: transitioned from <span class="highlight">Datadog → Prometheus</span>, improving <span class="highlight">cost efficiency & reliability</span>.</li>
+                            <li><strong>Upgraded Roku–Freewheel integration</strong> from <span class="highlight">VAST-based → OpenRTB</span>, enabling <span class="highlight">richer auctions & ecosystem standardization</span>.</li>
+                            <li><strong>Led Pixel Domain Blocking initiative</strong> — prevented unauthorized 3P tracking pixels in demand VAST responses, strengthening <span class="highlight">privacy & compliance</span>.</li>
+                            <li><strong>Improved SAAF (Server-Guided Ad Insertion) reliability</strong> by troubleshooting ad-selection failures.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="company-role"><span class="company">Gojek</span> – Senior Software Engineer</span>
+                            <span class="location-date">Bangalore | Jan 2021 – Jun 2024</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>Designed & scaled <strong>Profile Service</strong> to handle <span class="highlight">300K reads/sec & 1K writes/sec</span> with <span class="highlight">&lt;10ms read latency</span> across regions.</li>
+                            <li><strong>Conducted performance benchmarking of multiple databases</strong> to select the optimal system for Profile Service workloads.</li>
+                            <li><strong>Benchmarked & tuned Profile Service</strong>, identifying and resolving scaling bottlenecks to sustain production growth.</li>
+                            <li>Led <strong>customer identity migration</strong> (Gojek, GoPay, Tokopedia), enabling a <span class="highlight">360° customer view</span>.</li>
+                            <li>Built a <strong>custom gRPC connection pooling library in Golang</strong> for client-side load balancing, solving sticky connection & scaling issues.</li>
+                            <li><strong>Provisioned and maintained diverse infrastructure in Google Cloud using Terraform</strong> (GKE, Load Balancers, Gitlab Pipelines, Pub/Sub, Cloud Functions).</li>
+                            <li>Delivered <strong>SSO, biometrics-based login, and silent login</strong> features, cutting authentication costs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="company-role"><span class="company">Paytm Payments Bank</span> – Senior Software Engineer</span>
+                            <span class="location-date">Noida | Feb 2018 – Dec 2020</span>
+                        </div>
+                        <ul class="achievements">
+                            <li><strong>Collaborated on building and scaling</strong> the in-house <strong>UPI platform</strong> handling <span class="highlight">10M+ daily transactions</span>, migrating traffic and data from a third-party solution.</li>
+                            <li><strong>Designed and implemented real-time payment reconciliation</strong>, monitoring <span class="highlight">financial discrepancies across payment flows</span>.</li>
+                            <li><strong>Developed a bank health monitoring system</strong> to signal users upfront about likely transaction failures when partner banks were underperforming; also implemented a <strong>traffic regulator</strong> to manage requests to such banks.</li>
+                            <li><strong>Designed a fund-crediting service</strong> that enabled Paytm business accounts to seamlessly transfer funds to end-users, supporting diverse use cases including <span class="highlight">merchant payouts, cashback, refunds, and wallet-to-bank transfers</span>.</li>
+                            <li>Reduced <strong>customer support volume</strong> via system enhancements; built a <strong>reporting service</strong> analyzing financial & technical failure reasons.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="company-role"><span class="company">Nagarro</span> – Associate Software Engineer</span>
+                            <span class="location-date">Gurgaon | Jul 2016 – Jan 2018</span>
+                        </div>
+                        <ul class="achievements">
+                            <li><strong>Collaborated on building</strong> an automated document classification and data extraction system.</li>
+                            <li><strong>Designed algorithms</strong> for automatic extraction of tabular data from documents and images containing text.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column - Education, Skills, Technical Leadership -->
+            <div class="right-column">
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-item">
+                        <span class="degree"><strong>B.Tech, NIT Bhopal</strong></span>
+                        <span class="score">7.22/10 (2012 – 2016)</span>
+                    </div>
+                    <div class="education-item">
+                        <span class="degree"><strong>Intermediate, CBSE</strong></span>
+                        <span class="score">82.4% (2010 – 2011)</span>
+                    </div>
+                    <div class="education-item">
+                        <span class="degree"><strong>High School, CBSE</strong></span>
+                        <span class="score">93.2% (2008 – 2009)</span>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-grid">
+                        <span class="skill-category">Languages:</span>
+                        <span class="skill-list">Java, Golang, Node.js</span>
+                        
+                        <span class="skill-category">Data Systems:</span>
+                        <span class="skill-list">MySQL, PostgreSQL, Aerospike, Elasticsearch, Kafka, Redis</span>
+                        
+                        <span class="skill-category">Infrastructure:</span>
+                        <span class="skill-list">Docker, Kubernetes, Helm, Terraform, Google Cloud</span>
+                        
+                        <span class="skill-category">CS Fundamentals:</span>
+                        <span class="skill-list">Data Structures & Algorithms, Data-Intensive Application Design, Distributed Systems, Object-Oriented Design</span>
+                    </div>
+                </section>
+
+                <!-- Technical Leadership -->
+                <section class="section">
+                    <h2 class="section-title">Technical Leadership</h2>
+                    <ul class="leadership-list">
+                        <li>Mentored peers and juniors on <strong>application design, databases, and scaling</strong>.</li>
+                        <li>Collaborated with product and engineering teams to <strong>align business needs with technical design</strong>.</li>
+                        <li>Guided projects from ideation to delivery, <strong>clarifying scope and trade-offs in ambiguous situations</strong>.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
